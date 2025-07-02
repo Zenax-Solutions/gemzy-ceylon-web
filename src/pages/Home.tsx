@@ -64,25 +64,25 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center">
+      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBanner})` }}
         >
-          <div className="absolute inset-0 bg-gradient-hero/80"></div>
+          <div className="absolute inset-0 bg-gradient-hero/85"></div>
         </div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight font-playfair">
             Genuine Ceylon Sapphires
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/95 mb-6 sm:mb-8 leading-relaxed font-medium">
             Direct from the Source
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
             Explore a curated collection of natural Ceylon Sapphires from Sri Lanka
           </p>
           <Link to="/gemstones">
-            <Button size="lg" variant="gold" className="text-lg px-8 py-4">
+            <Button size="lg" variant="gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl">
               Explore Our Gemstones
             </Button>
           </Link>
@@ -90,28 +90,28 @@ const Home = () => {
       </section>
 
       {/* Why Choose Gemzy Section */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 font-playfair">
               Why Choose Gemzy
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Your trusted partner for authentic Ceylon sapphires with uncompromising quality
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-elegant transition-all duration-300 border-0 bg-background">
+              <Card key={index} className="text-center p-6 sm:p-8 hover:shadow-elegant hover:scale-105 transition-all duration-300 border-0 bg-background">
                 <CardContent className="pt-6">
-                  <div className="text-primary mb-4 flex justify-center">
+                  <div className="text-primary mb-4 sm:mb-6 flex justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground font-playfair">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
@@ -122,32 +122,33 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 font-playfair">
               Our Exquisite Collection
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Discover the beauty and brilliance of Ceylon sapphires in every color
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {gemstones.map((gem, index) => (
-              <Card key={index} className="group overflow-hidden border-0 shadow-elegant hover:shadow-xl transition-all duration-300">
+              <Card key={index} className="group overflow-hidden border-0 shadow-elegant hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <div className="aspect-square overflow-hidden">
                   <img 
                     src={gem.image} 
                     alt={gem.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                <CardContent className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-foreground font-playfair">
                     {gem.name}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {gem.description}
                   </p>
                 </CardContent>
@@ -155,9 +156,9 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 sm:mt-12">
             <Link to="/gemstones">
-              <Button variant="hero" size="lg" className="px-8">
+              <Button variant="hero" size="lg" className="px-6 sm:px-8 text-base sm:text-lg">
                 View All Gemstones
               </Button>
             </Link>
@@ -166,16 +167,16 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-4 sm:mb-6 font-playfair">
             Ready to Find Your Perfect Sapphire?
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-primary-foreground/95 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
             Contact us today to discuss your requirements and discover the perfect Ceylon sapphire for you.
           </p>
           <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-8">
+            <Button variant="gold" size="lg" className="px-6 sm:px-8 text-base sm:text-lg shadow-xl">
               Get in Touch
             </Button>
           </Link>
