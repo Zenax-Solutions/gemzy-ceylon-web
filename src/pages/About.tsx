@@ -82,6 +82,12 @@ const About = () => {
             <Card className="p-8 md:p-12 shadow-elegant">
               <CardContent className="pt-0">
                 <div className="mb-8">
+                  {/* Placeholder for founder image - Replace with actual image */}
+                  <img
+                    src="src/assets/founder.jpeg" // Replace with actual image path
+                    alt="B.C.H. Peiris"
+                    className="w-64 h-64 rounded-full mx-auto mb-6 object-cover object-top shadow-lg"
+                  />
                   <h3 className="text-3xl font-bold text-foreground mb-4">B.C.H. Peiris</h3>
                   <div className="text-lg text-muted-foreground space-y-2">
                     <p>MBA (UK) • PDipTH (UK) • DipDigM (UK)</p>

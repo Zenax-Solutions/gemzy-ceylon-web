@@ -64,30 +64,33 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBanner})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-hero/85"></div>
-        </div>
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight font-playfair">
-            Genuine Ceylon Sapphires
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/95 mb-6 sm:mb-8 leading-relaxed font-medium">
-            Direct from the Source
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Explore a curated collection of natural Ceylon Sapphires from Sri Lanka
-          </p>
-          <Link to="/gemstones">
-            <Button size="lg" variant="gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl">
-              Explore Our Gemstones
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBanner})` }}
+      >
+        {/* Black overlay with fade (from black to transparent) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20"></div>
+      </div>
+
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight font-playfair">
+          Genuine Ceylon Sapphires
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/95 mb-6 sm:mb-8 leading-relaxed font-medium">
+          Direct from the Source
+        </p>
+        <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+          Explore a curated collection of natural Ceylon Sapphires from Sri Lanka
+        </p>
+        <Link to="/gemstones">
+          <Button size="lg" variant="gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl">
+            Explore Our Gemstones
+          </Button>
+        </Link>
+      </div>
+    </section>
+
 
       {/* Why Choose Gemzy Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-secondary">

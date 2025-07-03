@@ -8,10 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-lg">G</span>
-              </div>
-              <span className="text-2xl font-bold font-playfair">Gemzy</span>
+              <img src="src/assets/gemzy-logo.png" alt="Gemzy Logo" className="h-32 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Your premier destination for exquisite Ceylon Sapphires, direct from Sri Lanka.
@@ -43,16 +40,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold font-playfair">Connect With Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
+                <a target="_blank" href="https://wa.me/qr/4QSBMHWCWR4BK1">
                 <MessageCircle className="w-5 h-5 text-accent" />
                 <span>WhatsApp</span>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
+                <a target="_blank" href="https://line.me/ti/p/EpuwscL73_">
                 <MessageCircle className="w-5 h-5 text-accent" />
                 <span>LINE</span>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
+                <a target="_blank" href="https://www.tiktok.com/@gemzy78?_t=ZS-8xiQ5ztsNHs&_r=1">
                 <MessageCircle className="w-5 h-5 text-accent" />
                 <span>TikTok</span>
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/80">
-            © 2024 Gemzy. Licensed by NGJA of Sri Lanka. All rights reserved.
+            © 2024 Gemzy. Licensed by NGJA of Sri Lanka. All rights reserved. Developed By <a target="_blank" href="https://zenax.info/">ZENAX</a> 
           </p>
         </div>
       </div>

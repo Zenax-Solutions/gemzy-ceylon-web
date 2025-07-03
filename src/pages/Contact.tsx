@@ -20,13 +20,26 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
+
+    const recipientEmail = "info@gemzy.com"; // Replace with your actual recipient email
+    const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.inquiry}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Inquiry Type: ${formData.inquiry}\n\n` +
+      `Message:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      title: "Opening Email Client",
+      description: "Please send the email from your email client. We'll get back to you within 24 hours.",
     });
-    // Reset form
-    setFormData({ name: '', email: '', inquiry: '', message: '' });
+    // Reset form after a short delay to allow mailto to trigger
+    setTimeout(() => {
+      setFormData({ name: '', email: '', inquiry: '', message: '' });
+    }, 1000);
   };
 
   const handleInputChange = (field: string, value: string) => {
