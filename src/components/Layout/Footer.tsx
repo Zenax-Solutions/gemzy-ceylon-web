@@ -1,4 +1,5 @@
 import { Phone, MapPin, MessageCircle } from "lucide-react";
+import logo from "@/assets/gemzy-logo.png"; // Adjust the path as necessary
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src="src/assets/gemzy-logo.png" alt="Gemzy Logo" className="h-32 w-auto" />
+              <img src={logo} alt="Gemzy Logo" className="h-32 w-auto" />
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Your premier destination for exquisite Ceylon Sapphires, direct from Sri Lanka.

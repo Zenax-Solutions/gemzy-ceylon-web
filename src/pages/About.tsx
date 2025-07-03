@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Target, Users, Gem } from "lucide-react";
+import founder from "@/assets/founder.jpeg"; // Adjust the path as necessary
 
 const About = () => {
   return (
@@ -84,7 +85,7 @@ const About = () => {
                 <div className="mb-8">
                   {/* Placeholder for founder image - Replace with actual image */}
                   <img
-                    src="src/assets/founder.jpeg" // Replace with actual image path
+                    src={founder} // Replace with actual image path
                     alt="B.C.H. Peiris"
                     className="w-64 h-64 rounded-full mx-auto mb-6 object-cover object-top shadow-lg"
                   />
