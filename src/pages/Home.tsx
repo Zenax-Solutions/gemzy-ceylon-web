@@ -9,6 +9,10 @@ import yellowSapphire from "@/assets/yellow-sapphire.jpg";
 import padparadscha from "@/assets/padparadscha.jpg";
 import pinkSapphire from "@/assets/pink-sapphire.jpg";
 
+// Import new images for Home page
+import blueSapphireRough from "@/assets/blue-sapphire-rough.jpg";
+import gemCutting2 from "@/assets/gem-cutting-2.jpg";
+
 const Home = () => {
   const features = [
     {
@@ -74,17 +78,17 @@ const Home = () => {
       </div>
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight font-playfair">
+        <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight font-playfair opacity-0 animate-fade-in-up animation-delay-200">
           Genuine Ceylon Sapphires
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/95 mb-6 sm:mb-8 leading-relaxed font-medium">
+        <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/95 mb-6 sm:mb-8 leading-relaxed font-medium opacity-0 animate-fade-in-up animation-delay-400">
           Direct from the Source
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-primary-foreground/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up animation-delay-600">
           Explore a curated collection of natural Ceylon Sapphires from Sri Lanka
         </p>
-        <Link to="/gemstones">
-          <Button size="lg" variant="gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl">
+        <Link to="/gemstones" className="opacity-0 animate-fade-in-up animation-delay-800">
+          <Button size="lg" variant="gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 shadow-xl text-primary-foreground hover:shadow-2xl transition-all duration-300">
             Explore Our Gemstones
           </Button>
         </Link>
@@ -124,6 +128,41 @@ const Home = () => {
         </div>
       </section>
 
+      {/* The Journey of a Gem Section */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 font-playfair">
+              The Journey of a Gem
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              From the earth's embrace to exquisite brilliance, witness the transformation of a Ceylon sapphire.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="shadow-elegant overflow-hidden">
+              <img src={blueSapphireRough} alt="Rough Blue Sapphire" className="w-full h-64 object-cover" />
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Raw Beauty</h3>
+                <p className="text-muted-foreground">
+                  Each sapphire begins as a rough crystal, holding its hidden potential.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-elegant overflow-hidden">
+              <img src={gemCutting2} alt="Gemstone Cutting Process" className="w-full h-64 object-cover" />
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Artisan Craftsmanship</h3>
+                <p className="text-muted-foreground">
+                  Skilled hands meticulously cut and polish, revealing the gem's inner fire.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,8 +179,8 @@ const Home = () => {
             {gemstones.map((gem, index) => (
               <Card key={index} className="group overflow-hidden border-0 shadow-elegant hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={gem.image} 
+                  <img
+                    src={gem.image}
                     alt={gem.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
@@ -179,7 +218,7 @@ const Home = () => {
             Contact us today to discuss your requirements and discover the perfect Ceylon sapphire for you.
           </p>
           <Link to="/contact">
-            <Button variant="gold" size="lg" className="px-6 sm:px-8 text-base sm:text-lg shadow-xl">
+            <Button variant="gold" size="lg" className="px-12 py-8 text-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-primary-foreground">
               Get in Touch
             </Button>
           </Link>

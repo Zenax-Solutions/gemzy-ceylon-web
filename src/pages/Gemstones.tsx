@@ -8,6 +8,12 @@ import yellowSapphire from "@/assets/yellow-sapphire.jpg";
 import padparadscha from "@/assets/padparadscha.jpg";
 import pinkSapphire from "@/assets/pink-sapphire.jpg";
 
+// Import new images for Gemstones page
+import finishedSapphireHand from "@/assets/finished-sapphire-hand.jpg";
+import assortedGems from "@/assets/assorted-gems.jpg";
+import blueSapphireCut from "@/assets/blue-sapphire-cut.jpg";
+import blueSapphireTweezer from "@/assets/blue-sapphire-tweezer.jpg";
+
 const Gemstones = () => {
   const mainGemstone = {
     name: "Blue Ceylon Sapphires",
@@ -157,6 +163,55 @@ const Gemstones = () => {
         </div>
       </section>
 
+      {/* Featured Gemstones Gallery */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Featured Gemstones Gallery
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              A glimpse into the exquisite beauty and variety of Ceylon sapphires we offer.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
+            <Card className="group overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img src={finishedSapphireHand} alt="Finished Sapphire in Hand" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-foreground">Perfectly Cut</h3>
+              </CardContent>
+            </Card>
+            <Card className="group overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img src={assortedGems} alt="Assorted Gemstones" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-foreground">Variety of Colors</h3>
+              </CardContent>
+            </Card>
+            <Card className="group overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img src={blueSapphireCut} alt="Blue Sapphire Cut" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-foreground">Brilliant Blue</h3>
+              </CardContent>
+            </Card>
+            <Card className="group overflow-hidden shadow-elegant hover:shadow-xl transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img src={blueSapphireTweezer} alt="Blue Sapphire with Tweezer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-foreground">Precision Handling</h3>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Custom Colors Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -165,7 +220,7 @@ const Gemstones = () => {
               Custom Colors Available
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Looking for a specific color or rare variety? Our extensive network in Sri Lanka allows us to 
+              Looking for a specific color or rare variety? Our extensive network in Sri Lanka allows us to
               source custom colored sapphires and other precious gemstones to meet your exact requirements.
             </p>
             
@@ -186,7 +241,7 @@ const Gemstones = () => {
             </div>
 
             <Link to="/contact">
-              <Button variant="gold" size="lg" className="px-8">
+              <Button variant="gold" size="lg" className="px-12 py-4 text-xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 Request Custom Gemstones
               </Button>
             </Link>

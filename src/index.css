@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

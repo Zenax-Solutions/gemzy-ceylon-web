@@ -2,6 +2,8 @@ import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Target, Users, Gem } from "lucide-react";
 import founder from "@/assets/founder.jpeg"; // Adjust the path as necessary
+import rawSapphireHand from "@/assets/raw-sapphire-hand.jpg";
+import gemCutting1 from "@/assets/gem-cutting-1.jpg";
 
 const About = () => {
   return (
@@ -25,21 +27,43 @@ const About = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-6">Our Story</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Gemzy is your premier destination for exquisite Ceylon Sapphires, founded by B.C.H. Peiris in 2019. 
-                We are a licensed dealer by the NGJA (National Gem and Jewellery Authority) of Sri Lanka, 
+                Gemzy is your premier destination for exquisite Ceylon Sapphires, founded by B.C.H. Peiris in 2019.
+                We are a licensed dealer by the NGJA (National Gem and Jewellery Authority) of Sri Lanka,
                 ensuring authenticity and quality in every gemstone we offer.
               </p>
+            </div>
+
+            {/* Gemstone Journey Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-20">
+              <Card className="shadow-elegant overflow-hidden">
+                <img src={rawSapphireHand} alt="Raw Sapphire in Hand" className="w-full h-64 object-cover" />
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">From Mine to Market</h3>
+                  <p className="text-muted-foreground">
+                    Every journey begins with the discovery of a raw, natural beauty from the earth.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="shadow-elegant overflow-hidden">
+                <img src={gemCutting1} alt="Gemstone Cutting" className="w-full h-64 object-cover" />
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Expert Craftsmanship</h3>
+                  <p className="text-muted-foreground">
+                    Skilled artisans meticulously cut and polish each gem to unlock its full brilliance.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
               <div>
                 <h3 className="text-3xl font-bold text-foreground mb-6">Our Mission</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  To provide the world's finest Ceylon sapphires directly from their source, 
+                  To provide the world's finest Ceylon sapphires directly from their source,
                   maintaining the highest standards of quality, authenticity, and ethical sourcing practices.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We believe that every gemstone tells a story, and we're honored to be part of 
+                  We believe that every gemstone tells a story, and we're honored to be part of
                   connecting these natural treasures with their destined owners worldwide.
                 </p>
               </div>

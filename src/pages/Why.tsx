@@ -2,17 +2,22 @@ import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { 
-  Globe, 
-  Star, 
-  Shield, 
-  Users, 
-  Gem, 
-  CheckCircle, 
+import {
+  Globe,
+  Star,
+  Shield,
+  Users,
+  Gem,
+  CheckCircle,
   Heart,
   Award,
   Eye
 } from "lucide-react";
+
+// Import new images
+import miningSite from "@/assets/mining-site.jpg";
+import riverMining from "@/assets/river-mining.jpg";
+import minePit from "@/assets/mine-pit.jpg";
 
 const Why = () => {
   const reasons = [
@@ -172,6 +177,51 @@ const Why = () => {
         </div>
       </section>
 
+      {/* Sourcing Process Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Our Sourcing Process
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              We believe in transparency and ethical practices from mine to market.
+              Witness the journey of our Ceylon sapphires.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="shadow-elegant overflow-hidden">
+              <img src={miningSite} alt="Mining Site" className="w-full h-64 object-cover" />
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Traditional Mining</h3>
+                <p className="text-muted-foreground">
+                  Our gems are sourced from traditional, small-scale mines in Sri Lanka, ensuring minimal environmental impact.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-elegant overflow-hidden">
+              <img src={riverMining} alt="River Mining" className="w-full h-64 object-cover" />
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-2">River Bed Extraction</h3>
+                <p className="text-muted-foreground">
+                  Miners carefully extract raw gemstones from river beds using age-old, sustainable methods.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="shadow-elegant overflow-hidden">
+              <img src={minePit} alt="Mine Pit" className="w-full h-64 object-cover" />
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Ethical Practices</h3>
+                <p className="text-muted-foreground">
+                  We ensure fair wages and safe working conditions for all miners, adhering to strict ethical guidelines.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Ethical Commitment Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
@@ -180,7 +230,7 @@ const Why = () => {
               Our Ethical Commitment
             </h2>
             <p className="text-xl text-muted-foreground mb-16 leading-relaxed">
-              At Gemzy, we believe that beautiful gemstones should come with a beautiful story. 
+              At Gemzy, we believe that beautiful gemstones should come with a beautiful story.
               Our commitment to ethical practices ensures that every purchase supports sustainable development.
             </p>
 
