@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Our Gemstones", href: "/gemstones" },
+    { name: "Gem Tours", href: "/gem-tours" },
     { name: "Why Gemzy", href: "/why" },
     { name: "Contact", href: "/contact" },
   ];

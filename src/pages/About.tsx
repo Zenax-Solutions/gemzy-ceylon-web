@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Target, Users, Gem } from "lucide-react";
+import { CheckCircle, Award, Target, Users, Gem } from "lucide-react";
 import founder from "@/assets/founder.jpeg"; // Adjust the path as necessary
 import rawSapphireHand from "@/assets/raw-sapphire-hand.jpg";
 import gemCutting1 from "@/assets/gem-cutting-1.jpg";
@@ -113,17 +113,16 @@ const About = () => {
                     alt="B.C.H. Peiris"
                     className="w-64 h-64 rounded-full mx-auto mb-6 object-cover object-top shadow-lg"
                   />
-                  <h3 className="text-3xl font-bold text-foreground mb-4">B.C.H. Peiris</h3>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">Chalith Peiris</h3>
                   <div className="text-lg text-muted-foreground space-y-2">
                     <p>MBA (UK) • PDipTH (UK) • DipDigM (UK)</p>
                     <p>Cert PM (UK) • Cert Gem (SL)</p>
                   </div>
                 </div>
 
-                <div className="text-left max-w-3xl mx-auto space-y-6">
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    With extensive qualifications in business management and gemology, B.C.H. Peiris brings 
-                    a unique combination of academic excellence and practical expertise to the world of Ceylon sapphires.
+                <div className="text-center max-w-3xl mx-auto space-y-6">
+                  <p className="text-lg text-muted-foreground text-center lg:text-justify leading-relaxed">
+                    Navigating the intricate landscape of Ceylon sapphires requires a rare blend of knowledge, and Chalith Peiris delivers just that. Possessing robust qualifications in business management and gemology, alongside a in Marketing, Tourism, and Hospitality Management earned over 11 years of experience, Peiris offers an exceptional fusion of academic insight and real-world commercial savvy. This unique perspective is invaluable for understanding market trends, consumer preferences, and the precise art of gem identification and valuation.
                   </p>
                   
                   <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary">
@@ -156,7 +155,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-8xl mx-auto">
             <Card className="text-center p-8 shadow-elegant">
               <CardContent className="pt-6">
                 <Award className="w-16 h-16 text-primary mx-auto mb-6" />
@@ -189,6 +188,17 @@ const About = () => {
                 </h3>
                 <p className="text-muted-foreground">
                   Every gemstone is carefully inspected and certified for authenticity and quality
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-8 shadow-elegant">
+              <CardContent className="pt-6">
+                <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                 Free Worldwide Shipping
+                </h3>
+                <p className="text-muted-foreground">
+                  Free shipping worldwide with tracking and with certificate for the gem
                 </p>
               </CardContent>
             </Card>

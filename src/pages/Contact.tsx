@@ -8,6 +8,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Phone, MapPin, MessageCircle, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import whatsappQr from "@/assets/whatsapp-qr.png";
+import lineQr from "@/assets/line-qr.jpg";
+import tiktokQr from "@/assets/tiktok-qr.png";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const recipientEmail = "info@gemzy.com"; // Replace with your actual recipient email
+    const recipientEmail = "gemzy.cmb@gmail.com"; // Replace with your actual recipient email
     const subject = encodeURIComponent(`Inquiry from ${formData.name} - ${formData.inquiry}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
@@ -57,19 +60,22 @@ const Contact = () => {
       icon: <MessageCircle className="w-8 h-8" />,
       title: "WhatsApp",
       details: "+94 71 533 80 76",
-      description: "Message us on WhatsApp for quick responses"
+      description: "Message us on WhatsApp for quick responses",
+      qr: whatsappQr
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
       title: "LINE",
       details: "Available on LINE",
-      description: "Connect with us through LINE messenger"
+      description: "Connect with us through LINE messenger",
+      qr: lineQr
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
       title: "TikTok",
-      details: "@gemzy_official",
-      description: "Follow us for gemstone education and updates"
+      details: "@gemzy.lk",
+      description: "Follow us for gemstone education and updates",
+      qr: tiktokQr
     }
   ];
 
@@ -132,6 +138,11 @@ const Contact = () => {
                           <p className="text-muted-foreground">
                             {method.description}
                           </p>
+                          {method.qr && (
+                            <div className="mt-4 text-left">
+                              <img src={method.qr} alt={`${method.title} QR Code`} className="w-32 h-32" />
+                            </div>
+                          )}
                         </div>
                       </div>
                     </CardContent>

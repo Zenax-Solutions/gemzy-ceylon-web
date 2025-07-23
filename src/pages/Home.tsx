@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Gem, Shield, Users, Globe, Star } from "lucide-react";
 import Layout from "@/components/Layout/Layout";
-import heroBanner from "@/assets/hero-banner.jpg";
+import newCoverImage from "@/assets/new_cover_image.png";
 import blueSapphire from "@/assets/blue-sapphire.jpg";
 import yellowSapphire from "@/assets/yellow-sapphire.jpg";
 import padparadscha from "@/assets/padparadscha.jpg";
@@ -18,7 +18,9 @@ const Home = () => {
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Direct from the Source",
-      description: "Ethically sourced directly from Sri Lankan mines"
+      description: "Ethically sourced directly from Sri Lankan mines",
+      bgColor: "bg-blue-50",
+      textColor: "text-blue-800"
     },
     {
       icon: <Star className="w-8 h-8" />,
@@ -28,12 +30,21 @@ const Home = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Licensed & Trusted",
-      description: "Certified by NGJA of Sri Lanka"
+      description: "Certified by NGJA of Sri Lanka",
+      bgColor: "bg-yellow-50",
+      textColor: "text-yellow-800"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Personalized Service",
       description: "Tailored sourcing for international clients"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Free Worldwide Shipping",
+      description: "Free shipping worldwide with tracking and with certificate for the gem",
+      bgColor: "bg-green-50",
+      textColor: "text-green-800"
     },
     {
       icon: <Gem className="w-8 h-8" />,
@@ -71,7 +82,7 @@ const Home = () => {
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBanner})` }}
+        style={{ backgroundImage: `url(${newCoverImage})` }}
       >
         {/* Black overlay with fade (from black to transparent) */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20"></div>
@@ -110,15 +121,15 @@ const Home = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 sm:p-8 hover:shadow-elegant hover:scale-105 transition-all duration-300 border-0 bg-background">
+              <Card key={index} className={`text-center p-6 sm:p-8 hover:shadow-elegant hover:scale-105 transition-all duration-300 border-0 ${feature.bgColor || 'bg-background'}`}>
                 <CardContent className="pt-6">
-                  <div className="text-primary mb-4 sm:mb-6 flex justify-center">
+                  <div className={`mb-4 sm:mb-6 flex justify-center ${feature.textColor || 'text-primary'}`}>
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground font-playfair">
+                  <h3 className={`text-lg sm:text-xl font-semibold mb-3 sm:mb-4 font-playfair ${feature.textColor || 'text-foreground'}`}>
                     {feature.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className={`text-sm sm:text-base leading-relaxed ${feature.textColor || 'text-muted-foreground'}`}>
                     {feature.description}
                   </p>
                 </CardContent>
